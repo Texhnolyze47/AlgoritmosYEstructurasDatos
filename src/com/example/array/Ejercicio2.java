@@ -56,7 +56,7 @@ public class Ejercicio2 {
         System.out.println("Numero de reprobados " + reprobados);
         System.out.println("Numero de aprobados "+ aprobados);
 
-        System.out.println("Numero de promedio menor o igual a 8 " + alumnosPromedio);
+        System.out.println("Numero de alumnos con un promedio menor o igual a 8 " + alumnosPromedio);
 
     }
 }
