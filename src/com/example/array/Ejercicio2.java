@@ -17,8 +17,8 @@ public class Ejercicio2 {
         int reprobados = 0;
         int aprobados = 0;
         int alumnosPromedio = 0;
-        double porcentajeReprobados = 0;
-        double porcentajeAprobados = 0 ;
+        double porcentajeReprobados;
+        double porcentajeAprobados;
 
         //contador
         int j = 1;
@@ -56,8 +56,7 @@ public class Ejercicio2 {
         System.out.println("Numero de reprobados " + reprobados);
         System.out.println("Numero de aprobados "+ aprobados);
 
-
-
+        System.out.println("Numero de promedio menor o igual a 8 " + alumnosPromedio);
 
     }
 }
