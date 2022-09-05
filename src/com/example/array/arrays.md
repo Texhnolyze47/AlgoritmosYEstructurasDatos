@@ -24,14 +24,15 @@ mi_arreglo[0] = 50;
 
 ## Ejercicio 1
 
-En un arreglo se ha almacenado el numero total de toneladas de cerealeas cosechas durante cada mes del año anterior
-Se desea lo siguiente
+En un arreglo se ha almacenado el número total de toneladas de cereales cosechas 
+durante cada mes del año anterior se desea lo siguiente:
 - Promedio anual  
 - Cuantos meses tuvieron una cosecha mayor al promedio anual
 -  Cuantos meses tuvieron una cosecha menor al promedio anual
 
 ## Ejercicio 2
-En un arreglo se almacena las calificaiones finales de n alumnos escribe un programa que ca
+En un arreglo se almacena las calificaciones finales de n alumnos escribe 
+un programa que capaz de sacar:
 
 - El promedio general del grupo
 - Numero de alumnos aprobados y numero de alumnos reprobados
@@ -41,7 +42,7 @@ En un arreglo se almacena las calificaiones finales de n alumnos escribe un prog
 
 ## Ejercicio 3
 
-Una compañia almacena la informacion almacena relaciona en los siguientes arreglos.
+Una compañía almacena la información almacena relaciona en los siguientes arreglos.
 
 provedores
 [p1,p2,p3,p4,...,pn]

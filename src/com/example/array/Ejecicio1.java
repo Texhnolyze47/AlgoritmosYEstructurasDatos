@@ -7,10 +7,14 @@ public class Ejecicio1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        // Arrays donde se guarda
         int[] toneladasMes = new int[12];
+        // donde se guarda la suma de todos los meses
         int suma = 0;
+        // Array donde seta los nombre de los mesos
         String[] meses =  new String[]{"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
                 "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
+
         int mayorPromedio = 0;
         int menorPromedio = 0;
         float promedioProduccion = 0;
@@ -37,6 +41,7 @@ public class Ejecicio1 {
 
         }
 
+        // Impresión de la info
         System.out.println("El promedio es: " + promedioProduccion);
         System.out.println("El mayor al promedio es: " + mayorPromedio);
         System.out.println("El menor al promedio es: " + menorPromedio);

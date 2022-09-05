@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Ejercicio3 {
 
     //Sí se quiere aumentar la cantidad de proveedores solo modificar
-    // el numero de abajo
+    // el número de abajo
     private static final String[] proveedor = new String[2];
     private static final String[] ciudad = new String[proveedor.length];
     private static final String[] numeroArticulo = new String[proveedor.length];
