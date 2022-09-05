@@ -51,7 +51,7 @@ public class Ejercicio2 {
         porcentajeAprobados = (float) (aprobados*100)/numeroAlumnos;
 
         System.out.println("Porcentaje de aprobados "+ porcentajeAprobados + "%");
-        System.out.println("Porcentaje de aprobados "+ porcentajeReprobados + "%");
+        System.out.println("Porcentaje de reprobados "+ porcentajeReprobados + "%");
 
         System.out.println("Numero de reprobados " + reprobados);
         System.out.println("Numero de aprobados "+ aprobados);
