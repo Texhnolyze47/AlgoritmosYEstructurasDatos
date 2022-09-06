@@ -8,13 +8,10 @@ public class Matrices2 {
 
         Scanner sc =  new Scanner (System.in);
 
-        // final int FILAS = 4, COLUMNAS = 4;
-
         System.out.println("Escribe el tamaño del arreglo");
         int size = sc.nextInt();
 
         int [][] matricesZeros = new int[size][size];
-
 
         for (int i = 0; i < size ; i++) {
             for (int j = 0; j < size ; j++) {
@@ -23,7 +20,6 @@ public class Matrices2 {
                 {
                     matricesZeros[i][j] = 1;
                 }
-
             }
         }
 
@@ -35,8 +31,5 @@ public class Matrices2 {
             }
             System.out.print("\n");
         }
-
-
-
     }
 }
