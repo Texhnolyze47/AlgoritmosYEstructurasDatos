@@ -6,13 +6,10 @@ public class Burbuja {
     private static int size;
     private static int [] array = new int[size];
 
-
-
     public static void main(String[] args) {
         int op = 0;
         Scanner sc = new Scanner(System.in);
         do {
-
             System.out.println("Menu");
             System.out.println("1. Agregar");
             System.out.println("2. Menor a mayor");
@@ -24,7 +21,7 @@ public class Burbuja {
                     agregar();
                     break;
                 case 2:
-                    Burbuja(array, array.length);
+                    BurbujaMenor(array, array.length);
 
                     break;
                 case 3:
@@ -37,6 +34,10 @@ public class Burbuja {
 
     }
 
+    /**
+     * Metodo para agregar los datos
+     * al array
+     */
     public static void agregar(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Escribe el tamaño del arreglo");
@@ -49,12 +50,21 @@ public class Burbuja {
 
 
     }
+
+    /**
+     * Este metodo para realizar el ordenamiento
+     * mediante el metodo burbuja de mayor a menor
+     * @param array
+     * @param size
+     */
+
     public static void BurbujaMayor(int [] array, int size){
         int aux = 0;
         int i = 2;
         int j;
         for(i = 0; i < array.length - 1; i++){
             for (j = i; j < array.length; j++){
+
                 if (array[i] < array[j]){
                     aux = array[i];
                     array[i] = array[j];
@@ -68,7 +78,14 @@ public class Burbuja {
         }
 
     }
-    public static void Burbuja (int [] array, int size){
+
+    /**
+     * Este metodo para realizar el ordenamiento
+     * mediante el metodo burbuja de menor a mayor
+     * @param array
+     * @param size
+     */
+    public static void BurbujaMenor(int [] array, int size){
     int aux = 0;
     int i = 2;
     int j;
@@ -85,7 +102,5 @@ public class Burbuja {
         for (i = 0; i < size; i++) {
             System.out.println(array[i]);
         }
-
-
     }
 }
