@@ -7,7 +7,7 @@ public class Burbuja {
     private static int [] array = new int[size];
 
     public static void main(String[] args) {
-        int op = 0;
+        int op;
         Scanner sc = new Scanner(System.in);
         do {
             System.out.println("Menu");
@@ -16,18 +16,10 @@ public class Burbuja {
             System.out.println("3. Mayor a menor");
             System.out.println("4. Salir");
             op = sc.nextInt();
-            switch (op){
-                case 1:
-                    agregar();
-                    break;
-                case 2:
-                    BurbujaMenor(array, array.length);
-
-                    break;
-                case 3:
-                    BurbujaMayor(array, array.length);
-                    break;
-
+            switch (op) {
+                case 1 -> agregar();
+                case 2 -> BurbujaMenor(array, array.length);
+                case 3 -> BurbujaMayor(array, array.length);
             }
         }while (!((op) == 4));
         System.out.println("Adios");
@@ -35,7 +27,7 @@ public class Burbuja {
     }
 
     /**
-     * Metodo para agregar los datos
+     * Método para agregar los datos
      * al array
      */
     public static void agregar(){
@@ -52,23 +44,27 @@ public class Burbuja {
     }
 
     /**
-     * Este metodo para realizar el ordenamiento
+     * Este método para realizar el ordenamiento
      * mediante el metodo burbuja de mayor a menor
-     * @param array
-     * @param size
+     *
      */
 
     public static void BurbujaMayor(int [] array, int size){
-        int aux = 0;
-        int i = 2;
+        int aux;
+        int i;
         int j;
         for(i = 0; i < array.length - 1; i++){
             for (j = i; j < array.length; j++){
 
                 if (array[i] < array[j]){
+                    System.out.println("El array[i]= " + array[i] + " es menor a el array[j]=" + array[j]);
                     aux = array[i];
+                    System.out.println("El valor array[i]= " + array[i] + " se mueve a la variable aux " + aux);
                     array[i] = array[j];
+                    System.out.println("El valor array[i]= " + array[i] + " toma el valor[j]= " + array[j] );
                     array[j] = aux;
+                    System.out.println("El valor array[j]= " + array[j] + " toma el valor aux= " + aux + "\n");
+
                 }
             }
         }
@@ -82,19 +78,22 @@ public class Burbuja {
     /**
      * Este metodo para realizar el ordenamiento
      * mediante el metodo burbuja de menor a mayor
-     * @param array
-     * @param size
+     *
      */
     public static void BurbujaMenor(int [] array, int size){
-    int aux = 0;
-    int i = 2;
+    int aux;
+    int i;
     int j;
         for(i = 0; i < array.length - 1; i++){
             for (j = i; j < array.length; j++){
                 if (array[i] > array[j]){
+                    System.out.println("El array[i]= " + array[i] + " es mayor a el array[j]=" + array[j]);
                     aux = array[i];
+                    System.out.println("El valor array[i]= " + array[i] + " se mueve a la variable aux " + aux);
                     array[i] = array[j];
+                    System.out.println("El valor array[i]= " + array[i] + " toma el valor[j]= " + array[j] );
                     array[j] = aux;
+                    System.out.println("El valor array[j]= " + array[j] + " toma el valor aux= " + aux + "\n");
                 }
             }
         }
