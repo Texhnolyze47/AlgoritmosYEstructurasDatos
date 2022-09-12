@@ -5,9 +5,11 @@ import java.util.Scanner;
 
 public class Ejercicio3 {
 
+
+    private static int size;
     //Sí se quiere aumentar la cantidad de proveedores solo modificar
     // el número de abajo
-    private static final String[] proveedor = new String[2];
+    private static final String[] proveedor = new String[size];
     private static final String[] ciudad = new String[proveedor.length];
     private static final String[] numeroArticulo = new String[proveedor.length];
 
@@ -16,10 +18,15 @@ public class Ejercicio3 {
 
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+
+        System.out.println("Coloca el numero de proveedores");
+        size = sc.nextInt();
+
         int op;
 
         do {
-            Scanner sc = new Scanner(System.in);
 
             System.out.println("Menu");
             System.out.println("1. Agregar usuarios");
