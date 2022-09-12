@@ -1,6 +1,6 @@
 # Metodos de Ordenamiento
 
-- Burbuja
+## Burbuja
 
 Burbuja (A,N)
 {A es un arreglo de N elementos}
@@ -24,7 +24,9 @@ N es longitud del arreglo
    
 A = {15,67,8,16,44,27,12,37}
 
-- Sacudida(A,N)
+---
+
+## Sacudida(A,N)
 I, IZQ,DER,K y AUX son entonces
 
 1. Hacer IQZ <-  2, DER <-  N, K <-
