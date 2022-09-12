@@ -30,7 +30,6 @@ I, IZQ,DER,K y AUX son entonces
 1. Hacer IQZ <-  2, DER <-  N, K <-
 2. Repetir mientras DEA >= IZQ
    1. Repetir con I desde DER hasta IZQ
-      
       1. Si A[I-1] > A[I] entonces
       hacer AUX <-  A[I-1]
       2. A[I-1] <-  A[I]

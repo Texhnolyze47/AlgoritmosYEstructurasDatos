@@ -17,9 +17,9 @@ public class Burbuja {
             System.out.println("4. Salir");
             op = sc.nextInt();
             switch (op) {
-                case 1 -> agregar();
-                case 2 -> BurbujaMenor(array, array.length);
-                case 3 -> BurbujaMayor(array, array.length);
+                case 1 ->  agregar();
+                case 2 ->  BurbujaMenor(array, array.length);
+                case 3 ->  BurbujaMayor(array, array.length);
             }
         }while (!((op) == 4));
         System.out.println("Adios");
