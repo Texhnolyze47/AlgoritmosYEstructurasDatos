@@ -51,3 +51,19 @@ I, IZQ,DER,K y AUX son entonces
    
 
 
+
+
+ ## insercion (A,N)
+
+I,AUX,K son enteros
+A es un arreglo
+N tamaño del arreglo
+
+1. Repetir con I desde 2 hasta N
+   2. Hacer aux <-  A[i]
+   3. k <-  I-1
+2. Repetir mientras (k+1) y (Aux < A[k])
+   3. Hacer A[k+1] <-  A[k]
+   4. k <-  k-1
+3. Fin del ciclo
+4. Fin del ciclo paso 1

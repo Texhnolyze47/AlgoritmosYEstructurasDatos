@@ -10,10 +10,12 @@ public class Sacudida {
     private static int[] array = new int[size];
 
     public static void main(String[] args) {
+        agregar();
         sacudida();
+        imprimir();
     }
 
-    public static void sacudida() {
+    public static  void agregar(){
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Elegi el tamaño del arreglo");
@@ -23,6 +25,17 @@ public class Sacudida {
             System.out.println("Posicion " + (i + 1));
             array[i] = sc.nextInt();
         }
+    }
+
+    public static void imprimir(){
+        System.out.println("Arreglo ordenado");
+        for (int i = 0; i < size; i++) {
+            System.out.println("Arreglo[i]= " + array[i]);
+        }
+
+    }
+
+    public static void sacudida() {
 
         int izq = 2;
         int der = size;
@@ -54,12 +67,6 @@ public class Sacudida {
             der = k - 1;
 
         }
-
-        System.out.println("Arreglo ordenado");
-        for (int i = 1; i < size; i++) {
-            System.out.println("Arreglo[i]= " + array[i]);
-        }
-
 
     }
 
