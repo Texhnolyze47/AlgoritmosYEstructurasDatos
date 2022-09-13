@@ -15,7 +15,9 @@ public class Insercion {
 
     }
 
-
+    /**
+     * Metodo que encarga de preguntar y llenar
+     */
     public static  void agregar(){
         Scanner sc = new Scanner(System.in);
 
@@ -32,14 +34,18 @@ public class Insercion {
         int aux;
         int k;
 
-        for (int i = 2; i > size; i++ ){
+        for (int i = 1; i < size; i++ ){
             aux = array[i];
+            System.out.println("Aux: " + aux);
             k = i - 1;
-            while ( k >= 1 && aux < array[k]){
+            System.out.println("K: " + k);
+            while ( k >=  0 && aux <= array[k]){
                 array[k+1] = array[k];
+                System.out.println("array[k+1]: " + array[k+1]);
                 k = k - 1;
             }
             array[k+1] = aux;
+            System.out.println("array[k+1]: " + array[k+1]);
         }
     }
 
