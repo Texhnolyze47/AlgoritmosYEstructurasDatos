@@ -47,7 +47,7 @@ I, IZQ,DER,K y AUX son entonces
          2. A[I]  <-  AUX
          3. k <-  1
 
-   
+
    
 
 
@@ -67,3 +67,20 @@ N tamaño del arreglo
    4. k <-  k-1
 3. Fin del ciclo
 4. Fin del ciclo paso 1
+
+## Seleccion (A,N)
+
+{I, Menor , K Y J} son enteros
+
+1. Repetir con I desde 1 hasta N-1
+   1. Hacer Menor <-  A[I]
+      1. K <-  I
+   2. Repetir con j desde I+1 hasta P
+      1. A[J] < Menor entonces
+         1. Hacer Menor <-  A[J]
+            1. K <-  J
+      2. Fin del ciclo
+   2. Fin del ciclo
+      1. Hacer A[k] <-  A[I]
+      2. A[I] <-  Menor
+1. Fin del ciclo
