@@ -8,6 +8,9 @@ public class Seleccion {
 
     private static int[] array = new int[size];
 
+    /**
+     * Metodo principal donde se ejecuta el menu
+     */
     public static void main(String[] args) {
 
         int op;
@@ -32,6 +35,9 @@ public class Seleccion {
 
     }
 
+    /**
+     * Metodo que se encargase elige el tamaño y agregan los valores
+     */
     public static  void agregar(){
         Scanner sc = new Scanner(System.in);
 
@@ -44,8 +50,11 @@ public class Seleccion {
         }
     }
 
+    /**
+     * Metodo que usa el algoritmo de seleccion para ordenar de menor a mayor
+     */
     public static void seleccionMenorMayor(){
-    int i,Menor = 0, k = 0, j;
+    int i,Menor, k, j;
         for (i = 0; i < array.length - 1 ; i++) {
             Menor = array[i];
                 k = i;
@@ -60,9 +69,11 @@ public class Seleccion {
         }
     }
 
-
+    /**
+     * Metodo que usa el algoritmo de seleccion para ordenar de mayor a menor
+     */
     public static void seleccionMayorMenor(){
-        int i,Menor = 0, k = 0, j;
+        int i,Menor, k, j;
         for (i = 0; i < array.length - 1 ; i++) {
             Menor = array[i];
             k = i;
@@ -77,7 +88,9 @@ public class Seleccion {
         }
     }
 
-
+    /**
+     * Metodo que se encarga de imprimir el array
+     */
     public static void imprimir(){
         System.out.println("Arreglo ordenado");
         for (int i = 0; i < size; i++) {
