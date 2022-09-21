@@ -84,3 +84,24 @@ N tamaño del arreglo
       1. Hacer A[k] <-  A[I]
       2. A[I] <-  Menor
 1. Fin del ciclo
+
+## Shell (A,N)
+{INT, I, AUX son enteros}
+
+1. Hacer INT, n + i
+2. Repetir mientras
+   1. Hacer <-  parte entera (INT entre 2)
+   2. Band <-  verdadero
+3. Repetir mientras (Band = verdadero) 
+   1. Hacer Band <-  falso
+   2. I <-  1
+4. Repetir mientras ((I + INT ) <= N)
+   1. Si A[I] > A[I+INT] entonces
+      1. Hacer Aux <-  A[I]
+      2. A[I] <-  A[I+INT]
+      3. A[I+INT] = Aux
+      4. Band <-  verdadero
+      {Fin del ciclo}
+   2. Hacer I <-  I + 1
+   {Fin del ciclo}
+{Fin del ciclo}
