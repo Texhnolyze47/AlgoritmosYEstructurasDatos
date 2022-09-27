@@ -4,12 +4,16 @@ import java.util.Scanner;
 
 public class ColaArray
 {
+    // Variables del objeto
     private int MAX;
     private int[] COLA;
     private int FRENTE;
     private int FINAL;
 
-
+    /**
+     * constructor del objeto que ayuda a dar el valor maximo al objeto
+     * @param MAX
+     */
     public ColaArray(int MAX)
     {
         this.MAX = MAX;
@@ -18,6 +22,10 @@ public class ColaArray
         this.COLA = new int[this.MAX+1];
     }
 
+    /**
+     * Regresa si la cola esta lleno
+     * @return
+     */
     public boolean IsColaLlena()
     {
         if(this.FINAL == this.MAX)
@@ -29,6 +37,11 @@ public class ColaArray
             return false;
         }
     }
+
+    /**
+     * Regresa sí la cola esta vacia
+     * @return
+     */
 
     public boolean IsColaVacia()
     {
@@ -42,6 +55,9 @@ public class ColaArray
         }
     }
 
+    /**
+     * Ayuda a meterlos elementos en la cola
+     */
     public void InsertarCola()
     {
         if(this.IsColaLlena())
@@ -62,6 +78,10 @@ public class ColaArray
         }
     }
 
+    /**
+     * Elimina un dato del que esta en la primera posicion es el primer que sale.
+     */
+
     public void EliminarCola()
     {
         if(this.FRENTE == this.FINAL)
@@ -70,7 +90,7 @@ public class ColaArray
         }
         else
         {
-            for(int i=FRENTE;i < FINAL - 1;i++)
+            for(int i=FRENTE;i < FINAL;i++)
             {
                 COLA[i] = COLA[i+1];
             }
@@ -79,6 +99,9 @@ public class ColaArray
         }
     }
 
+    /**
+     * Imprime los datos
+     */
     public void MostrarCola()
     {
         if(this.IsColaVacia())
