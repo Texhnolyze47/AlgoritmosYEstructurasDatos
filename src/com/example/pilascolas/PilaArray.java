@@ -7,8 +7,10 @@ public class PilaArray {
     int TOPE;
     int MAX;
 
-
-    //-- CUANDO SE LE ASIGNA EL TAMAÑO MAXIMO
+    /**
+     * constructor del objeto que ayuda a dar el valor maximo al objeto
+     * @param MAX
+     */
     public PilaArray(int MAX)
     {
         this.TOPE = 0;
@@ -21,11 +23,18 @@ public class PilaArray {
         return TOPE;
     }
 
+    /**
+     * Vaciar pila
+     */
     public void VaciarPila()
     {
         this.TOPE = 0;
     }
 
+    /**
+     * Comprueba sí la pila esta llena
+     * @return
+     */
     public boolean IsPilaLlena()
     {
         if(this.MAX == this.TOPE)
@@ -38,6 +47,10 @@ public class PilaArray {
         }
     }
 
+    /**
+     * Comprueba sí la pila esta vacia
+     * @return
+     */
     public boolean IsPilaVacia()
     {
         if(this.TOPE == 0)
@@ -50,6 +63,9 @@ public class PilaArray {
         }
     }
 
+    /**
+     * Insertar un elemento de la pila
+     */
     public void InsertarPila()
     {
         if(this.IsPilaLlena())
@@ -71,6 +87,9 @@ public class PilaArray {
         }
     }
 
+    /**
+     * Eliminar un elemento de la pila
+     */
     public void EliminarPila()
     {
         if(this.IsPilaVacia())
@@ -86,6 +105,9 @@ public class PilaArray {
         }
     }
 
+    /**
+     * Mostrar datos de la pila
+     */
     public void MostrarPila()
     {
         if(this.IsPilaVacia())
