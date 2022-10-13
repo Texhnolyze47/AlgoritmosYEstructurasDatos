@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Colas {
 
-
     public static ColaArray Cola;
 
     public static void main(String[] args) {
@@ -14,7 +13,6 @@ public class Colas {
         MAX = sc.nextInt();
 
         Cola = new ColaArray(MAX);
-
 
         int op;
         do {
