@@ -30,8 +30,6 @@ public class Lista {
         System.out.print("null");
 
     }
-
-
 }
 
 

@@ -10,16 +10,16 @@ public class ListaEnlazadas {
 
 
         System.out.println("nodo 1 - dato: " + nodo.getDato());
-        System.out.println("nodo 1 - enlace: " +nodo.getEnlace());
-        System.out.println("nodo 1 - puntero: " +nodo);
+        System.out.println("nodo 1 - enlace: " + nodo.getEnlace());
+        System.out.println("nodo 1 - puntero: " + nodo);
 
         System.out.println("nodo 2 - dato: " + nodo2.getDato());
-        System.out.println("nodo 2 - enlace: " +nodo2.getEnlace());
-        System.out.println("nodo 2 - enlace: " +nodo2);
+        System.out.println("nodo 2 - enlace: " + nodo2.getEnlace());
+        System.out.println("nodo 2 - puntero: " + nodo2);
 
         System.out.println("nodo 3 - dato: " + nodo3.getDato());
-        System.out.println("nodo 3 - enlace: " +nodo3.getEnlace());
-        System.out.println("nodo 3 - enlace: " +nodo3);
+        System.out.println("nodo 3 - enlace: " + nodo3.getEnlace());
+        System.out.println("nodo 3 - puntero: " + nodo3);
 
         Lista lista = new Lista();
 
@@ -28,9 +28,6 @@ public class ListaEnlazadas {
         lista.insertarCabezaLista(1);
 
         lista.visualizar();
-
-
-
 
 
     }
