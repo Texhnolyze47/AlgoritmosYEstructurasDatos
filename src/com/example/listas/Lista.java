@@ -1,35 +1,81 @@
 package com.example.listas;
 
 public class Lista {
-    private Nodo primero;
+    private Nodo cabeza;
+    private Nodo cola;
+    private int length;
+
 
 
     public Lista() {
-        primero = null;
+        cabeza = null;
+        cola = null;
+        length = 0;
     }
 
-    public Lista insertarCabezaLista(int entrada) {
-        Nodo nuevo;
-        nuevo = new Nodo(entrada);
-        nuevo.enlace = primero;
-        primero = nuevo;
-        return this;
-
+    public boolean isEmpty(){
+        return length == 0;
     }
-
-    public void visualizar() {
-        Nodo n;
-        int k = 0;
-        n = primero;
-        System.out.println("Listas ligadas");
-        while (n != null) {
-            System.out.print(n.dato + " -> ");
-            n = n.enlace;
-            k++;
+    /**
+     * Este metodo llama al objeto Nodo para insertar un valor de tipo
+     * int que recibira mediante un parametro
+     * @param entrada
+     */
+    public void insertarCabezaLista(int entrada) {
+        Nodo nuevoNodo = new Nodo(entrada);
+        if (isEmpty()){
+            cola = nuevoNodo;
+        } else {
+            cabeza.setPrevious(nuevoNodo);
         }
-        System.out.print("null");
+        nuevoNodo.setNext(cabeza);
+        cabeza = nuevoNodo;
+        length++;
 
     }
+
+    /**
+     * Este metodo llama al objeto Nodo para insertar un valor de tipo
+     * int que recibira mediante un parametro
+     * @param entrada
+     */
+    public void insertarFinalLista(int entrada) {
+        Nodo nuevoNodo = new Nodo(entrada);
+        if (isEmpty()){
+            cabeza = nuevoNodo;
+        } else {
+            cola.setNext(nuevoNodo);
+            nuevoNodo.setPrevious(cola);
+        }
+        cola = nuevoNodo;
+        length++;
+    }
+
+    public void visualizarArriba() {
+        if (cabeza == null){
+            return;
+        }
+        Nodo aux = cabeza;
+        while (aux != null){
+            System.out.print(aux.getDato()+" -->");
+            aux = aux.getNext();
+        }
+        System.out.println("null");
+    }
+
+
+    public void visualizarAbajo() {
+        if (cabeza == null){
+            return;
+        }
+        Nodo aux = cola;
+        while ( aux != null){
+            System.out.print(aux.getDato() + "-->");
+            aux = aux.getPrevious();
+        }
+        System.out.println("null");
+    }
+
 }
 
 
