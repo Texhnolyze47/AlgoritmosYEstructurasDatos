@@ -1,7 +1,5 @@
 package com.example.listas.pilasColas;
 
-import com.example.listas.Lista;
-
 import java.util.Scanner;
 
 public class Main {

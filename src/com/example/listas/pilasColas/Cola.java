@@ -42,14 +42,6 @@ public class Cola {
     }
 
     /**
-     * Método que retorna el primer elemento de la Cola.
-     * @return: Elemento de tipo genérico.
-     */
-    public Nodo primero() {
-
-        return primero.getNext();
-    }
-    /**
      * Método que vacia la cola.
      */
     public void vaciar() {
@@ -84,7 +76,6 @@ public class Cola {
     }
     /**
      * Método que extrae un elemento de la Cola.
-     * @throws Exception : la cola está vacía
      */
     public void extraer() {
 
