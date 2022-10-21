@@ -1,29 +1,29 @@
 package com.example.listas;
 
-public class Nodo {
+public class NodoPilasColas {
     // dato del numero a ingresar al nodo
     private int dato;
     // Objeto para posicionar el nodo a la izquierda
-    private Nodo next;
+    private NodoPilasColas next;
     // Objeto para posicinar el nodo a la derecha
-    private Nodo previous;
+    private NodoPilasColas previous;
     //construtor para colocar el dato dentro de nuestro nodo
-    public Nodo (int x){
+    public NodoPilasColas(int x){
         dato = x;
     }
 
-    public Nodo (int x,Nodo n){
+    public NodoPilasColas(int x, NodoPilasColas n){
         dato = x;
         next = n;
     }
 
-    public Nodo(int dato, Nodo next, Nodo previous) {
+    public NodoPilasColas(int dato, NodoPilasColas next, NodoPilasColas previous) {
         this.dato = dato;
         this.next = next;
         this.previous = previous;
     }
 
-    public Nodo() {
+    public NodoPilasColas() {
     }
     // getters y setters
 
@@ -35,19 +35,19 @@ public class Nodo {
         this.dato = dato;
     }
 
-    public Nodo getNext() {
+    public NodoPilasColas getNext() {
         return next;
     }
 
-    public void setNext(Nodo next) {
+    public void setNext(NodoPilasColas next) {
         this.next = next;
     }
 
-    public Nodo getPrevious() {
+    public NodoPilasColas getPrevious() {
         return previous;
     }
 
-    public void setPrevious(Nodo previous) {
+    public void setPrevious(NodoPilasColas previous) {
         this.previous = previous;
     }
 }

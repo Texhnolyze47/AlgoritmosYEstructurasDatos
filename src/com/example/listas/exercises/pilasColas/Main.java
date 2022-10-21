@@ -1,4 +1,4 @@
-package com.example.listas.pilasColas;
+package com.example.listas.exercises.pilasColas;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package com.example.listas.pilasColas;
+package com.example.listas.exercises.pilasColas;
 
 public class Nodo {
     int value;

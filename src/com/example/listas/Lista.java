@@ -1,8 +1,8 @@
 package com.example.listas;
 
 public class Lista {
-    private Nodo cabeza;
-    private Nodo cola;
+    private NodoPilasColas cabeza;
+    private NodoPilasColas cola;
     private int length;
 
     public Lista() {
@@ -23,7 +23,7 @@ public class Lista {
      * @param entrada
      */
     public void insertarCabezaLista(int entrada) {
-        Nodo nuevoNodo = new Nodo();
+        NodoPilasColas nuevoNodo = new NodoPilasColas();
         nuevoNodo.setDato(entrada);
         if (isEmpty()) {
             cabeza = nuevoNodo;
@@ -45,7 +45,7 @@ public class Lista {
      * @param entrada
      */
     public void insertarFinalLista(int entrada) {
-        Nodo nuevoNodo = new Nodo(entrada);
+        NodoPilasColas nuevoNodo = new NodoPilasColas(entrada);
         if (isEmpty()) {
             cola.setNext(nuevoNodo);
             nuevoNodo.setNext(cabeza);
@@ -92,7 +92,7 @@ public class Lista {
 
     public void visualizarArriba() {
         if (!isEmpty()) {
-            Nodo aux = cabeza;
+            NodoPilasColas aux = cabeza;
             int i = 0;
             System.out.print("->");
             do {
