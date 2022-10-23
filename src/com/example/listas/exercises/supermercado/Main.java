@@ -1,21 +1,16 @@
 package com.example.listas.exercises.supermercado;
 
-import java.util.HashMap;
 import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
         ListaProducto listaProducto = new ListaProducto();
 
-
         for (int i = 0; i < 8; i++) {
             listaProducto.insertarCabezaLista(nombresAleatorios(i+1),cantidad(),precios());
         }
 
         listaProducto.visualizar();
-
-
-
     }
 
     public static String nombresAleatorios(int iterador){
@@ -36,7 +31,6 @@ public class Main {
         precio = rand.nextDouble(maxRange - minRange) + minRange;
 
         return precio;
-
     }
     public static int cantidad(){
         Random rand = new Random();
@@ -47,7 +41,6 @@ public class Main {
         cantidad = rand.nextInt(maxRange - minRange) + minRange;
 
         return cantidad;
-
     }
 
 }

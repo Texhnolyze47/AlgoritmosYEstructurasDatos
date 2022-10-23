@@ -17,7 +17,6 @@ public class NodoCine {
         edad = x;
         next = n;
     }
-
     public NodoCine(int dato, NodoCine next, NodoCine previous) {
         this.edad = dato;
         this.next = next;

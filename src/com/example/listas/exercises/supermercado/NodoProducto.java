@@ -29,9 +29,7 @@ public class NodoProducto {
         this.cantidad = cantidad;
     }
 
-    public double getPrecio() {
-        return precio;
-    }
+    public double getPrecio() {  return precio;  }
 
     public void setPrecio(double precio) {
         this.precio = precio;

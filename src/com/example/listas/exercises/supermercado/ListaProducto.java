@@ -1,7 +1,5 @@
 package com.example.listas.exercises.supermercado;
 
-import com.example.listas.NodoPilasColas;
-
 public class ListaProducto {
     private NodoProducto cabeza;
     private NodoProducto cola;
@@ -46,7 +44,6 @@ public class ListaProducto {
                 total = aux.getCantidad() * aux.getPrecio();
                 precioFinal += total;
                 System.out.printf("%10s %10d %10.2f %10.2f \n", aux.getNombre(), aux.getCantidad(), aux.getPrecio(), total);
-                //System.out.print(aux.getNombre() +"  "+   aux.getCantidad() +" " + aux.getPrecio() +" "+  total);
                 aux = aux.getNext();
 
                 i++;
