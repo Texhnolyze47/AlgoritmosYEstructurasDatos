@@ -13,7 +13,6 @@ public class Main {
         matriz.agregar(2,3,3);
         matriz.agregar(4,3,4);
 
-        matriz.remover(0,1);
 
         matriz.imprimir();
     }

@@ -12,7 +12,6 @@ public class Main {
         grafo.addNodo(new NodoGrafo(4));
         grafo.addNodo(new NodoGrafo(5));
 
-
         grafo.addVertice(0,1);
         grafo.addVertice(0,2);
         grafo.addVertice(1,2);
@@ -23,6 +22,5 @@ public class Main {
         grafo.addVertice(4,3);
 
         grafo.print();
-
     }
 }

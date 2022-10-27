@@ -1,6 +1,5 @@
 package com.example.grafos.listasenlazadas;
 
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -68,10 +67,6 @@ public class ListaGrafo {
             System.out.println("null");
         }
     }
-
-
-
-
 }
 
 
