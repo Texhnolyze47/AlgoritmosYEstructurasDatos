@@ -41,12 +41,11 @@ public class MainArray {
     }
 
     /**
-     * Este funcion se encarga recorrer el array y encontrar un numero en especifico
+     * Esta función se encarga recorrer el array y encontrar un número en específico
      * @param arr Es un arreglo de enteros
      * @param inicio El iterador que rompe el ciclo de repetición
      * @param fin Es el punto que sirve para marca cuando debe parar la recursion
      * @param numero que busca en el array
-     * @return
      */
     public static int search(int[] arr, int inicio, int fin, int numero){
         if (fin <  inicio){
