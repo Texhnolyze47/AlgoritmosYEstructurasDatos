@@ -60,7 +60,7 @@ public class MainArray {
         return search(arr, inicio+1, fin-1, numero);
     }
 
-    private static void printMatrix(int[][] mat, int i, int j) {
+    public static void printMatrix(int[][] mat, int i, int j) {
         if(mat==null){
             return;
         }
