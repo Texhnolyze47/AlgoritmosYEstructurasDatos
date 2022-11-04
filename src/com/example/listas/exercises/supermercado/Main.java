@@ -14,11 +14,8 @@ public class Main {
     }
 
     public static String nombresAleatorios(int iterador){
-        StringBuilder nombres = new StringBuilder();
 
-        nombres.append("Productos").append(iterador);
-
-     return nombres.toString();
+        return "Productos" + iterador;
     }
 
     public static double precios(){
@@ -26,10 +23,9 @@ public class Main {
 
         int minRange = 1;
         int maxRange = 50;
-        double precio = 0;
+        double precio;
 
         precio = rand.nextDouble(maxRange - minRange) + minRange;
-
         return precio;
     }
     public static int cantidad(){
