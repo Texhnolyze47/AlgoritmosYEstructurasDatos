@@ -20,13 +20,13 @@ public class DFS {
      * @param nodo este objeto se encarga de conectar los nodos con sus padres
      */
     public void addNodo(int[ ] estado, NodoDFS nodo){
-        // Agrega el los datos del nodo
-        NodoDFS nodeTemp =  NodoDFS.add(estado);
+        // Agrega los datos del nodo
+        NodoDFS nodoHijo =  NodoDFS.add(estado);
         // hace la conexion con un nodo padre
-        nodeTemp.setPadre(nodo);
+        nodoHijo.setPadre(nodo);
         // comprueba sí el nodo ya ha sido visido con las listas ligadas
-        if (!nodoDFS.contains(nodeTemp) && !visto.contains(nodeTemp)){
-            nodoDFS.add(nodeTemp);
+        if (!nodoDFS.contains(nodoHijo) && !visto.contains(nodoHijo)){
+            nodoDFS.add(nodoHijo);
         }
     }
 
@@ -45,9 +45,9 @@ public class DFS {
         }
         // esta variable es para marca cuando se ha terminado de visitar todos los nodos
         boolean bEstadoFinal = false;
-        // Creamos un Optional vacio ya que vas adelante guardaremos los valores
+        // Creamos un Optional vacio ya que mas adelante guardaremos los valores
         Optional <NodoDFS> nodoEncontrado = Optional.empty();
-        // Metemos metemos los valores inciales en un nodo
+        // Metemos los valores inciales en un nodo
         NodoDFS raiz = NodoDFS.add(estadoInicial);
         // Luego metemos este nodo a nuestra pila
         nodoDFS.add(raiz);
@@ -86,7 +86,7 @@ public class DFS {
             nodoActual = nodoActual.getPadre();
         }
         Collections.reverse(estados);
-        System.out.println("Solution in: " + estados.size() + " levels [" + String.join(",", estados) + "] time: ");
+        System.out.println("La solucion  se conseiguio en: " + estados.size() + " niveles [" + String.join(",", estados));
 
     }
 
