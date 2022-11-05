@@ -1,8 +1,5 @@
 package com.example.grafos.recorridoanchura;
 
-import com.example.grafos.recorridoprofundo.NodoDFS;
-import com.example.listas.exercises.pilasColas.Nodo;
-
 import java.util.*;
 
 import static java.util.Objects.isNull;

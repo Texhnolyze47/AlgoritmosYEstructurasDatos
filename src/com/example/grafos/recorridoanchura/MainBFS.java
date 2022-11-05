@@ -5,8 +5,8 @@ public class MainBFS {
         int[] estadoInicial = new int[]{4,2,3,1};
         int[] estadoFinal = new int[]{1,2,3,4};
 
-        final BFS bfs = new BFS();
-        final NodoBFS nodeDFSSolucion = bfs.search(estadoInicial, estadoFinal).orElseThrow(NullPointerException::new);
+        BFS bfs = new BFS();
+        NodoBFS nodeDFSSolucion = bfs.search(estadoInicial, estadoFinal).orElseThrow(NullPointerException::new);
 
         bfs.printSolution(nodeDFSSolucion);
 

@@ -2,6 +2,9 @@ package com.example.grafos.recorridoanchura;
 
 import java.util.Arrays;
 
+/**
+ * Esta clase usa para crear los nodos que vamos a usar en la Clase BFS
+ */
 public class NodoBFS {
     private int[] dato;
     private NodoBFS padre;
@@ -30,14 +33,14 @@ public class NodoBFS {
     }
 
     @Override
-    public boolean equals(Object object) {
-        if (this == object) {
+    public boolean equals(Object objeto) {
+        if (this == objeto) {
             return true;
         }
-        if (object == null || getClass() != object.getClass()) {
+        if (objeto == null || getClass() != objeto.getClass()) {
             return false;
         }
-        NodoBFS nodeBFS = (NodoBFS) object;
+        NodoBFS nodeBFS = (NodoBFS) objeto;
         return Arrays.equals(this.dato, nodeBFS.dato);
 
     }
