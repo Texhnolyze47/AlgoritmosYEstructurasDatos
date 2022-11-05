@@ -9,14 +9,13 @@ public class NodoBFS {
     private int[] dato;
     private NodoBFS padre;
 
-    @SuppressWarnings("unused")
     private NodoBFS() { }
 
-    private NodoBFS(final int[] state) {
-        this.dato = state;
+    private NodoBFS(int[] dato) {
+        this.dato = dato;
     }
 
-    static NodoBFS of(final int[] dato) {
+    static NodoBFS of(int[] dato) {
         return new NodoBFS(dato);
     }
 
@@ -33,20 +32,22 @@ public class NodoBFS {
     }
 
     @Override
-    public boolean equals(Object objeto) {
-        if (this == objeto) {
+    public boolean equals(Object object) {
+        if (this == object) {
             return true;
         }
-        if (objeto == null || getClass() != objeto.getClass()) {
+        if (object == null || getClass() != object.getClass()) {
             return false;
         }
-        NodoBFS nodeBFS = (NodoBFS) objeto;
+        NodoBFS nodeBFS = (NodoBFS) object;
         return Arrays.equals(this.dato, nodeBFS.dato);
 
     }
 
     @Override
     public String toString() {
-        return Arrays.toString(this.getDato());
+        return "NodoBFS{" +
+                "estado=" + Arrays.toString(this.getDato()) +
+                '}';
     }
 }
