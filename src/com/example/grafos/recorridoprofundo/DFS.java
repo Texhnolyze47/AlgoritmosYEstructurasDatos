@@ -4,6 +4,9 @@ import java.util.*;
 
 import static java.util.Objects.isNull;
 
+/**
+ * Esta clase se encarga de implementar el algoritmo de DFS
+ */
 public class DFS {
     // Usamos stack para tener los metodos basicos de una pila
     private Stack <NodoDFS> nodoDFS = new Stack<>();

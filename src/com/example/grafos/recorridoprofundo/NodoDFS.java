@@ -3,6 +3,9 @@ package com.example.grafos.recorridoprofundo;
 import java.util.Arrays;
 import java.util.Objects;
 
+/**
+ * Esta clase usa para crear los nodos que vamos a usar en la Clase DFS
+ */
 public class NodoDFS {
 
     private int[] estado;
@@ -11,13 +14,24 @@ public class NodoDFS {
     public NodoDFS() {
     }
 
+    /**
+     * Constructor que se encarga de guadar los dos dentro del nodo
+     * @param estado arreglos de int
+     */
     public NodoDFS(int[] estado) {
         this.estado = estado;
     }
+
+    /**
+     * Metodo que crea los nodos
+     * @param dato arreglos de int
+     * @return regresa un objeto
+     */
     public static NodoDFS add (int[] dato){
         return new NodoDFS(dato);
     }
 
+    // Metodos getters y setters
     public int[] getEstado() {
         return estado;
     }
@@ -34,15 +48,20 @@ public class NodoDFS {
         this.padre = padre;
     }
 
+    /**
+     * Este metodo comprueba
+     * @param objeto
+     * @return
+     */
     @Override
-    public boolean equals(Object o) {
-        if (this == o) {
+    public boolean equals(Object objeto) {
+        if (this == objeto) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (objeto == null || getClass() != objeto.getClass()) {
             return false;
         }
-        NodoDFS nodeDFS = (NodoDFS) o;
+        NodoDFS nodeDFS = (NodoDFS) objeto;
         return Arrays.equals(this.estado, nodeDFS.estado);
     }
 
