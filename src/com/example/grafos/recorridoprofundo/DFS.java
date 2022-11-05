@@ -9,10 +9,10 @@ import static java.util.Objects.isNull;
  */
 public class DFS {
     // Usamos stack para tener los metodos basicos de una pila
-    private Stack <NodoDFS> nodoDFS = new Stack<>();
+    private final Stack <NodoDFS> nodoDFS = new Stack<>();
     // Usamos listas ligadas para conseguir el conjunto de aristas ya
     // este algoritmo usa listas adyacentes para conocer los vecinos de nuestro nodo
-    private List <NodoDFS>  visto = new LinkedList<>();
+    private final List <NodoDFS>  visto = new LinkedList<>();
 
     /**
      * Este modo se encarga de crear los nodos
@@ -34,7 +34,7 @@ public class DFS {
      * Este metodo se encarga de buscar dentro de nuestro arbol usando el Algoritmo DFS
      * @param estadoInicial array de enteros del estado original
      * @param estadoFinal array de entros del estado que buscamos
-     * @return
+     * @return regresa los resultados de la busqueda
      */
     public Optional <NodoDFS> search (int[] estadoInicial, int[] estadoFinal){
         // Se hace verificaciones para evitar que el estado inicial o final este vacio
@@ -45,7 +45,7 @@ public class DFS {
         }
         // esta variable es para marca cuando se ha terminado de visitar todos los nodos
         boolean bEstadoFinal = false;
-        // Creamos un Optional vacio ya que mas adelante guardaremos los valores
+        // Creamos un Optional vacio, ya que más adelante guardaremos los valores
         Optional <NodoDFS> nodoEncontrado = Optional.empty();
         // Metemos los valores inciales en un nodo
         NodoDFS raiz = NodoDFS.add(estadoInicial);

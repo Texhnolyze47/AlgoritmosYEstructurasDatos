@@ -17,7 +17,6 @@ public class BFS {
      * Este metodo se encarga de buscar dentro de nuestro arbol usando el Algoritmo BFS
      * @param estadoInicial array de enteros del estado original
      * @param estadoFinal array de entros del estado que buscamos
-     * @return
      */
     public Optional<NodoBFS> search(int[] estadoInicial, int[] estadoFinal) {
         // comprueba que tanto el estado incial o final no este final
@@ -29,7 +28,7 @@ public class BFS {
         }
         // esta variable es para marca cuando se ha terminado de visitar todos los nodos
         boolean seEncontroEstadoFinal = false;
-        // Creamos un Optional vacio ya que mas adelante guardaremos los valores
+        // Creamos un Optional vacio, ya que más adelante guardaremos los valores
         Optional<NodoBFS> nodoEncontrado = Optional.empty();
         // Metemos los valores inciales en un nodo
         NodoBFS raiz = NodoBFS.of(estadoInicial);

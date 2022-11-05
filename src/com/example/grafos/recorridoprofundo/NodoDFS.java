@@ -1,7 +1,6 @@
 package com.example.grafos.recorridoprofundo;
 
 import java.util.Arrays;
-import java.util.Objects;
 
 /**
  * Esta clase usa para crear los nodos que vamos a usar en la Clase DFS
@@ -50,8 +49,6 @@ public class NodoDFS {
 
     /**
      * Este metodo comprueba
-     * @param objeto
-     * @return
      */
     @Override
     public boolean equals(Object objeto) {
