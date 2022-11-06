@@ -7,7 +7,7 @@ import java.util.Arrays;
  */
 public class NodoDFS {
 
-    private int[] estado;
+    private int[] datos;
     private NodoDFS padre;
 
     public NodoDFS() {
@@ -15,10 +15,10 @@ public class NodoDFS {
 
     /**
      * Constructor que se encarga de guadar los dos dentro del nodo
-     * @param estado arreglos de int
+     * @param dato arreglos de int
      */
-    public NodoDFS(int[] estado) {
-        this.estado = estado;
+    public NodoDFS(int[] dato) {
+        this.datos = dato;
     }
 
     /**
@@ -31,12 +31,12 @@ public class NodoDFS {
     }
 
     // Metodos getters y setters
-    public int[] getEstado() {
-        return estado;
+    public int[] getDatos() {
+        return datos;
     }
 
-    public void setEstado(int[] estado) {
-        this.estado = estado;
+    public void setDatos(int[] datos) {
+        this.datos = datos;
     }
 
     public NodoDFS getPadre() {
@@ -59,14 +59,14 @@ public class NodoDFS {
             return false;
         }
         NodoDFS nodeDFS = (NodoDFS) objeto;
-        return Arrays.equals(this.estado, nodeDFS.estado);
+        return Arrays.equals(this.datos, nodeDFS.datos);
     }
 
 
     @Override
     public String toString() {
         return "NodoDFS{" +
-                "estado=" + Arrays.toString(this.getEstado()) +
+                "estado=" + Arrays.toString(this.getDatos()) +
                 '}';
     }
 }

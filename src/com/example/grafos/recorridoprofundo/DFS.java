@@ -57,11 +57,11 @@ public class DFS {
             visto.add(nodeDFS);
             // Esta condicion se encarga de verificar sí el estado inicial es igual al estado final
             // cuando cumpla esta condicion la condicion while terminara
-            if (Arrays.equals(nodeDFS.getEstado(), estadoFinal)){
+            if (Arrays.equals(nodeDFS.getDatos(), estadoFinal)){
                 bEstadoFinal = true;
                 nodoEncontrado = Optional.of(nodeDFS);
             }else {
-                int[] nodoEstado = nodeDFS.getEstado();
+                int[] nodoEstado = nodeDFS.getDatos();
                 this.addNodo(new int[]{nodoEstado[1],nodoEstado[0],nodoEstado[2], nodoEstado[3]}, nodeDFS);
                 this.addNodo(new int[]{nodoEstado[0],nodoEstado[2],nodoEstado[1], nodoEstado[3]}, nodeDFS);
                 this.addNodo(new int[]{nodoEstado[0],nodoEstado[1],nodoEstado[3], nodoEstado[2]}, nodeDFS);
