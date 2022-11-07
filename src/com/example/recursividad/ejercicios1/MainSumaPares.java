@@ -1,4 +1,4 @@
-package com.example.recursividad;
+package com.example.recursividad.ejercicios1;
 
 public class MainSumaPares {
 
