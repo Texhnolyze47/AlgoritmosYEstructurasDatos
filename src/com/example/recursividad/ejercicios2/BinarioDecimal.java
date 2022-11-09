@@ -2,18 +2,23 @@ package com.example.recursividad.ejercicios2;
 
 public class BinarioDecimal {
     public static void main(String[] args) {
-        String numeroBinario = "101101";
+        int numeroBinario = 101101;
         System.out.println(binarioEntero(numeroBinario));
     }
 
-    public static int binarioEntero(String binaryNumber) {
-        int decimal = 0;
-        int length = binaryNumber.length();
-        if (length > 0) {
-            String substring = binaryNumber.substring(1);
-            int digit = Character.getNumericValue(binaryNumber.charAt(0));
-            decimal = digit * (int) Math.pow(2, length - 1) + binarioEntero(substring);
+    /**
+     * Este método convierte un numero binario a decimal
+     * @param numeroBinario este numero binario que vamos a convertir
+     * @return regresa el número en forma decimal
+     */
+    public static int binarioEntero(int numeroBinario) {
+        // En caso de que el usuario coloque cero se regresa cero para evitar errores
+        if(numeroBinario==0){
+            return 0;
         }
-        return decimal;
-    }//output: decimal = 10
+        else
+            // este es el mismo procedimiento que usamos de la conversion de decimal a binario,
+            // pero como vamos a convertir esto a decimal debemos hacerlo por una base 10
+            return (numeroBinario % 10 + 2* binarioEntero(numeroBinario / 10));
+    }
 }

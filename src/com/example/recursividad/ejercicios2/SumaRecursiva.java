@@ -12,7 +12,7 @@ public class SumaRecursiva {
      * @return regresa la suma de los numerous haste el límite que se indique
      */
     public static int sumaRecursiva(int limite){
-
+        // En caso de que el usuario coloque cero se regresa cero para evitar errores
         if (limite == 0){
             return 0;
         } else {
