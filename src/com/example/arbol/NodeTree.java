@@ -4,7 +4,7 @@ public class NodeTree {
     private int valor;
     private NodeTree izquierda, derecha;
 
-    public NodeTree(int valor){
+    public NodeTree(int valor) {
         this.valor = valor;
     }
 
@@ -37,8 +37,6 @@ public class NodeTree {
     public void setDerecha(NodeTree derecha) {
         this.derecha = derecha;
     }
-
-
 
 
 }
