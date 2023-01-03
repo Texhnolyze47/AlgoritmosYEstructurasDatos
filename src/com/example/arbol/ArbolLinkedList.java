@@ -51,9 +51,9 @@ public class ArbolLinkedList {
      * @return regresa una lista con los nodos usando el recorrido profundo
      */
     public List<Integer> preOrderRecursive() {
-        List<Integer> list = new ArrayList<Integer>();
-        dfs(raiz, list);
-        return list;
+        List<Integer> lista = new ArrayList<Integer>();
+        dfs(raiz, lista);
+        return lista;
     }
 
     /**
@@ -76,7 +76,7 @@ public class ArbolLinkedList {
      * @return regresa una lista con los valores ordenados
      */
     public List<Integer> inOrderIterative() {
-        List<Integer> list = new ArrayList<>();
+        List<Integer> lista = new ArrayList<>();
         Stack<NodeTree> pila = new Stack<>();
         NodeTree nodoActual = raiz;
         while (nodoActual != null || !pila.isEmpty()) {
@@ -85,10 +85,10 @@ public class ArbolLinkedList {
                 nodoActual = nodoActual.getIzquierda();
             }
             nodoActual = pila.pop();
-            list.add(nodoActual.getValor());
+            lista.add(nodoActual.getValor());
             nodoActual = nodoActual.getDerecha();
         }
-        return list;
+        return lista;
     }
 
     /**
@@ -97,21 +97,99 @@ public class ArbolLinkedList {
      * @return regresa una lista con los valores ordenados
      */
     public List<Integer> postOrderIterative() {
-        LinkedList<Integer> list = new LinkedList<>();
-        Stack<NodeTree> stack = new Stack<>();
+        LinkedList<Integer> lista = new LinkedList<>();
+        Stack<NodeTree> pila = new Stack<>();
         if (raiz == null)
-            return list;
-        stack.push(raiz);
-        while (!stack.isEmpty()) {
-            NodeTree cur = stack.pop();
-            list.addFirst(cur.getValor());
+            return lista;
+        pila.push(raiz);
+        while (!pila.isEmpty()) {
+            NodeTree cur = pila.pop();
+            lista.addFirst(cur.getValor());
             if (cur.getIzquierda() != null) {
-                stack.push(cur.getIzquierda());
+                pila.push(cur.getIzquierda());
             }
             if (cur.getDerecha() != null) {
-                stack.push(cur.getDerecha());
+                pila.push(cur.getDerecha());
             }
         }
-        return list;
+        return lista;
+    }
+
+    /**
+     * Este metodo busca el nodo mas profundo del arbol
+     * @return regresa un objeto NodeTree
+     */
+    private NodeTree getDeepestNode() {
+        if (raiz == null) {
+            System.out.println("El arbol esta vacio");
+            return null;
+        }
+        NodeTree nodeActual = null;
+        Queue<NodeTree> cola = new LinkedList<NodeTree>();
+        cola.add(raiz);
+        while (!cola.isEmpty()) {
+            nodeActual = cola.remove();
+            if (nodeActual.getIzquierda() != null) {
+                cola.add(nodeActual.getIzquierda());
+            }
+            if (nodeActual.getDerecha() != null) {
+                cola.add(nodeActual.getDerecha());
+            }
+        }
+        return nodeActual;
+    }
+
+
+    /**
+     * borra el nodo más profundo del arbol binario
+     */
+    private void deleteDeepestNode() {
+        Queue<NodeTree> cola = new LinkedList<NodeTree>();
+        cola.add(raiz);
+        NodeTree nodeAnterior, nodoActual = null;
+        while (!cola.isEmpty()) {
+            nodeAnterior = nodoActual;
+            nodoActual = cola.remove();
+            if (nodoActual.getIzquierda() == null) {
+                nodeAnterior.setDerecha(null);
+                return;
+            } else if (nodoActual.getDerecha() == null) {
+                nodoActual.setIzquierda(null);
+                return;
+            }
+            cola.add(nodoActual.getIzquierda());
+            cola.add(nodoActual.getDerecha());
+        }
+    }
+
+    /**
+     * El método comienza verificando si el árbol está vacío, y si es así,
+     * imprime un mensaje y devuelve control. De lo contrario, crea una cola de nodos y
+     * agrega la raíz del árbol a la cola.
+     * Luego entra en un ciclo while que continuará mientras la cola no esté vacía.
+     * @param value
+     */
+    public void deleteNode(int value) {
+        if (raiz == null) {
+            System.out.println("El arbol esta vacio ");
+            return;
+        }
+        Queue<NodeTree> cola = new LinkedList<NodeTree>();
+        cola.add(raiz);
+        while (!cola.isEmpty()) {
+            NodeTree nodeActual = cola.remove();
+            // if node is found then copy deepest node here and delete deepest node.
+            if (nodeActual.getValor() == value) {
+                nodeActual.setValor(getDeepestNode().getValor());
+                deleteDeepestNode();
+                return;
+            }else {
+                if (nodeActual.getIzquierda() != null)
+                    cola.add(nodeActual.getIzquierda());
+                if (nodeActual.getDerecha() != null)
+                    cola.add(nodeActual.getDerecha());
+            }
+        }
+        System.out.println("Se no ha encontrado el nodo");
     }
 }
