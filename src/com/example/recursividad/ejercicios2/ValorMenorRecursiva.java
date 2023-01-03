@@ -1,6 +1,5 @@
 package com.example.recursividad.ejercicios2;
 
-
 public class ValorMenorRecursiva {
     public static void main(String[] args) {
         int[] arr = {2,23,4,5,1,3};
@@ -25,6 +24,5 @@ public class ValorMenorRecursiva {
             }
         }
         return menor;
-
     }
 }
